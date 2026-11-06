@@ -1,1 +1,160 @@
-/* Início */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fffdfa;
+    color: #493444;
+    line-height: 1.5;
+}
+
+.topo {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 17px 28px;
+    background: #fffdfa;
+    color: #493444;
+    border: 1px solid #eadfdf;
+}
+
+#logo {
+    font-size: 1.5rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+#logo span {
+    color: #f0c4cd;
+}
+
+nav a {
+    color: #493444;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 28px;
+    align-items: center;
+    min-height: 530px;
+    padding: 55px 30px;
+    background: #f8f0ee;
+}
+
+.hero-texto {
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+.sobretitulo {
+    color: #ad7885;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 18px;
+    color: #493444;
+}
+
+.hero h2 span {
+    color: #ad7885;
+}
+
+.hero-texto p {
+    margin-bottom: 20px;
+}
+
+.imagem-hero {
+    min-height: 400px;
+    background-color: #e7ced0;
+    background-image: linear-gradient(rgba(248, 232, 232, .10), rgba(114, 70, 85, .10)), url("https://images.unsplash.com/photo-1543422655-ac1c6ca993ed?auto=format&fit=crop&w=1100&q=80");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 180px 180px 12px 12px;
+    box-shadow: 14px 15px 0 rgba(173, 120, 133, .15);
+}
+
+.secao {
+    max-width: 1050px;
+    margin: 34px auto;
+    padding: 38px 26px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+    text-align: center;
+    scroll-margin-top: 100px;
+}
+
+.secao h2 {
+    color: #493444;
+    font-size: 2.2rem;
+    margin-bottom: 18px;
+}
+
+.dica {
+    color: #776d73;
+    font-size: 0.95rem;
+    margin-bottom: 22px;
+}
+
+.grade {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.info, .card {
+    background: #ffffff;
+    border: 1px solid #eadfdf;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.info h3, .card h3 {
+    color: #493444;
+    margin-bottom: 12px;
+}
+
+.info p, .card p {
+    color: #776d73;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 9px 4px;
+    border: none;
+    border-radius: 8px;
+    background: #ad7885;
+    color: #ffffff;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.rodape {
+    text-align: center;
+    padding: 26px;
+    background: #493444;
+    color: #f2e3e4;
+    margin-top: 30px;
+}
