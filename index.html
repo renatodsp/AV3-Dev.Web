@@ -5,14 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alma & Aroma - Perfumaria</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
+    <!-- Cabeçalho e menu: mesma estrutura do Grão & Aroma -->
     <header class="topo">
         <h1 id="logo">✿ Alma <span>&</span> Aroma</h1>
         <nav>
             <a href="#inicio">Início</a>
             <a href="#sobre">Sobre</a>
+            <a href="#produtos">Produtos</a>
+            <a href="#contato">Contato</a>
+            <a href="#assistente">Assistente</a>
         </nav>
     </header>
 
@@ -22,6 +27,7 @@
                 <p class="sobretitulo">PERFUMARIA FEITA PARA SENTIR</p>
                 <h2>Sua essência merece <span>florescer.</span></h2>
                 <p>Conheça fragrâncias que acompanham seus momentos e expressam sua personalidade.</p>
+                <a href="#produtos" class="btn">Explorar fragrâncias</a>
             </div>
             <div class="imagem-hero"></div>
         </section>
@@ -90,7 +96,19 @@
                 <div id="resultado-contato">Demonstração acadêmica: a mensagem não será enviada nem armazenada.</div>
             </div>
         </section>
-        
+
+        <section id="assistente" class="secao secao-assistente">
+            <p class="sobretitulo">ATENDIMENTO PERSONALIZADO</p>
+            <h2>Converse com a Lia ✿</h2>
+            <p class="dica">Sou a assistente virtual da Alma & Aroma. Posso ajudar você a conhecer as fragrâncias.</p>
+            <div class="form">
+                <div id="msg-usuario">Sua pergunta aparecerá aqui.</div>
+                <div id="chat-box">Olá! Sou a Lia, assistente da Alma & Aroma. Qual tipo de perfume você procura?</div>
+                <input type="text" id="input" placeholder="Pergunte à Lia sobre os perfumes...">
+                <button id="enviar" class="btn">Enviar para Lia</button>
+            </div>
+            <p class="dica">A Lia precisa do servidor e de uma chave Gemini configurada para responder com IA.</p>
+        </section>
     </main>
 
     <footer class="rodape">
