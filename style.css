@@ -138,6 +138,49 @@ nav a {
     color: #776d73;
 }
 
+.secao-produtos {
+    background: #f8f5f0;
+}
+
+.foto-produto {
+    min-height: 220px;
+    background-color: #ead3d7;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.foto-floral {
+    background-image: linear-gradient(rgba(247, 225, 229, .10), rgba(171, 119, 136, .15)), url("https://images.unsplash.com/photo-1763631403216-8d193008481e?auto=format&fit=crop&w=650&q=80");
+}
+
+.foto-bosque {
+    background-color: #d6c4b4;
+    background-image: linear-gradient(rgba(230, 210, 191, .1), rgba(110, 86, 67, .15)), url("https://images.unsplash.com/photo-1774682060992-46c7e9f2e50b?auto=format&fit=crop&w=650&q=80");
+}
+
+.foto-citrica {
+    background-color: #eae0b9;
+    background-image: linear-gradient(rgba(252, 237, 192, .1), rgba(201, 176, 101, .15)), url("https://images.unsplash.com/photo-1609451043305-745f798b51a3?auto=format&fit=crop&w=650&q=80");
+}
+
+.card .tipo {
+    color: #ad7885;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-bottom: 7px;
+}
+
+.card .preco {
+    display: block;
+    color: #493444;
+    margin-top: 14px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
 .btn {
     display: inline-block;
     padding: 12px 20px;
@@ -149,6 +192,36 @@ nav a {
     font-size: 1rem;
     text-decoration: none;
     cursor: pointer;
+}
+
+.form {
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.form p {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 13px;
+    border: 1px solid #eadfdf;
+    border-radius: 8px;
+}
+
+.form .btn {
+    width: 100%;
+    margin: 0 0 12px;
+}
+
+#resultado-contato, #msg-usuario, #chat-box {
+    padding: 14px;
+    margin-bottom: 14px;
+    background: #f8eeef;
+    border-radius: 8px;
 }
 
 .rodape {
