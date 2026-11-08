@@ -224,6 +224,18 @@ nav a {
     border-radius: 8px;
 }
 
+#msg-usuario {
+    background: #f1e5e5;
+}
+
+#chat-box {
+    background: #f8f5f0;
+}
+
+.secao-assistente {
+    background: #fff8f8;
+}
+
 .rodape {
     text-align: center;
     padding: 26px;
