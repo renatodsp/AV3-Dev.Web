@@ -1,6 +1,5 @@
 console.log("JavaScript da Alma & Aroma conectado!");
 
-//CARDS:
 let cards = document.querySelectorAll(".card");
 let assunto = document.getElementById("assunto");
 let mensagem = document.getElementById("mensagem");
@@ -16,7 +15,6 @@ cards.forEach(function (card) {
     });
 });
 
-//CONTATO
 let nome = document.getElementById("nome");
 let email = document.getElementById("email");
 let resultadoContato = document.getElementById("resultado-contato");
@@ -44,15 +42,18 @@ function registrarInteresse() {
     console.log("Formulário demonstrativo preenchido.");
 }
 
-//ASSISTENTE
 let inputChat = document.getElementById("input");
 let enviar = document.getElementById("enviar");
 let msgUsuario = document.getElementById("msg-usuario");
 let chatBox = document.getElementById("chat-box");
 
 enviar.addEventListener("click", enviarMensagem);
+inputChat.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+        enviarMensagem();
+    }
+});
 
-// Exceção autorizada: fetch, async/await e JSON
 async function enviarMensagem() {
     let texto = inputChat.value.trim();
     if (texto === "") {
