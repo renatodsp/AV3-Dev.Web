@@ -3,12 +3,14 @@ const fs = require("fs");
 const chave = process.env.GEMINI_API_KEY;
 const porta = process.env.PORT || 3000;
 
-const contexto = "Você é Lia, assistente da perfumaria fictícia Alma & Aroma. " +
+const contexto = "Você é Lia, assistente virtual da perfumaria Alma & Aroma. " +
     "Responda em português, de modo curto, simpático e sempre sobre os perfumes ou o site. " +
     "Produtos: Flor de Aurora, floral, R$ 129,00; Bosque Sereno, amadeirado, R$ 149,00; " +
-    "Luz Cítrica, cítrico, R$ 119,00. Todos são perfumes fictícios de 50 ml. " +
-    "Ajude a escolher um aroma. O botão Tenho interesse preenche o contato, que é uma demonstração. " +
-    "Não existe pagamento ou envio real. Não invente estoque, entrega ou informações desconhecidas.";
+    "Luz Cítrica, cítrico, R$ 119,00. Todos os perfumes têm 50 ml. " +
+    "Ajude a escolher um aroma. Para comprar ou tirar dúvidas sobre pedidos, oriente o cliente a clicar em " +
+    "Tenho interesse e preencher o formulário de contato; a equipe retorna por e-mail. " +
+    "Não invente estoque, prazos de entrega, formas de pagamento, promoções ou informações desconhecidas; " +
+    "nesses casos, diga que a equipe pode ajudar pelo formulário de contato.";
 
 function enviarJSON(res, codigo, dados) {
     res.writeHead(codigo, { "Content-Type": "application/json; charset=utf-8" });
@@ -17,7 +19,7 @@ function enviarJSON(res, codigo, dados) {
 
 async function conversar(mensagem, res) {
     if (!chave) {
-        enviarJSON(res, 503, { erro: "A Lia ainda não foi configurada. Consulte o README." });
+        enviarJSON(res, 503, { erro: "A Lia está indisponível no momento. Tente novamente mais tarde." });
         return;
     }
     try {

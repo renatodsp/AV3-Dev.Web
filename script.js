@@ -38,8 +38,8 @@ function registrarInteresse() {
         return;
     }
 
-    resultadoContato.innerText = "Obrigada, " + textoNome + "! Seu interesse em " + textoAssunto + " foi registrado apenas nesta tela. Nenhuma mensagem foi enviada ou salva.";
-    console.log("Formulário demonstrativo preenchido.");
+    resultadoContato.innerText = "Obrigada, " + textoNome + "! Seu interesse em " + textoAssunto + " foi registrado. Em breve nossa equipe entrará em contato pelo e-mail " + textoEmail + ".";
+    console.log("Formulário de contato preenchido.");
 }
 
 let inputChat = document.getElementById("input");

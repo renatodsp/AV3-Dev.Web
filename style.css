@@ -1,4 +1,4 @@
-{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -36,7 +36,19 @@ body {
     user-select: none;
 }
 
-#logo span {
+#logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icone {
+    width: 36px;
+    height: 48px;
+    flex-shrink: 0;
+}
+
+.logo-texto span {
     color: #f0c4cd;
 }
 
@@ -259,4 +271,8 @@ nav a:hover {
     background: #493444;
     color: #f2e3e4;
     margin-top: 30px;
+}
+
+#resultado-contato:empty {
+    display: none;
 }
