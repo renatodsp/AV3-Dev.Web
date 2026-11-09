@@ -1,4 +1,4 @@
-* {
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -44,6 +44,11 @@ nav a {
     color: #493444;
     text-decoration: none;
     margin-left: 15px;
+}
+
+nav a:hover {
+    color: #ad7885;
+    text-decoration: underline;
 }
 
 .hero {
@@ -138,6 +143,14 @@ nav a {
     color: #776d73;
 }
 
+.card {
+    transition: transform .2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
 .secao-produtos {
     background: #f8f5f0;
 }
@@ -192,6 +205,10 @@ nav a {
     font-size: 1rem;
     text-decoration: none;
     cursor: pointer;
+}
+
+.btn:hover {
+    background: #493444;
 }
 
 .form {
