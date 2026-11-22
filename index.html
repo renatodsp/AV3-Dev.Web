@@ -32,6 +32,25 @@
             <a href="#contato">Contato</a>
             <a href="#assistente">Assistente</a>
         </nav>
+        <div class="acoes">
+            <button id="btn-carrinho" class="btn-topo" type="button">🛒 Carrinho (<span id="qtd-carrinho">0</span>)</button>
+            <div class="conta">
+                <button id="btn-conta" class="btn-topo" type="button">Entrar</button>
+                <div id="menu-conta" class="menu-flutuante" hidden>
+                    <div id="conta-deslogado">
+                        <p>Entre com seu e-mail para ver seus pedidos.</p>
+                        <input type="text" id="login-email" placeholder="Digite seu e-mail">
+                        <button id="btn-login" class="btn" type="button">Entrar</button>
+                        <div id="login-erro"></div>
+                    </div>
+                    <div id="conta-logado" hidden>
+                        <p>Olá, <strong id="conta-nome"></strong></p>
+                        <button id="btn-meus-pedidos" class="btn" type="button">Meus pedidos</button>
+                        <button id="btn-sair" class="btn btn-claro" type="button">Sair</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -63,32 +82,9 @@
         <section id="produtos" class="secao secao-produtos">
             <p class="sobretitulo">DESCUBRA SUA FRAGRÂNCIA</p>
             <h2>Nossos perfumes</h2>
-            <p class="dica">Conheça as opções e clique em "Tenho interesse" para preencher o contato.</p>
-            <div class="grade">
-                <div class="card">
-                    <div class="foto-produto foto-floral"></div>
-                    <p class="tipo">FLORAL</p>
-                    <h3>Flor de Aurora</h3>
-                    <p>Uma fragrância delicada, inspirada na leveza e no frescor das flores.</p>
-                    <span class="preco">R$ 129,00 · 50 ml</span>
-                    <a class="btn interesse" href="#contato">Tenho interesse</a>
-                </div>
-                <div class="card">
-                    <div class="foto-produto foto-bosque"></div>
-                    <p class="tipo">AMADEIRADO</p>
-                    <h3>Bosque Sereno</h3>
-                    <p>Notas envolventes para quem prefere aromas intensos e elegantes.</p>
-                    <span class="preco">R$ 149,00 · 50 ml</span>
-                    <a class="btn interesse" href="#contato">Tenho interesse</a>
-                </div>
-                <div class="card">
-                    <div class="foto-produto foto-citrica"></div>
-                    <p class="tipo">CÍTRICO</p>
-                    <h3>Luz Cítrica</h3>
-                    <p>Uma combinação refrescante para um dia mais leve e cheio de energia.</p>
-                    <span class="preco">R$ 119,00 · 50 ml</span>
-                    <a class="btn interesse" href="#contato">Tenho interesse</a>
-                </div>
+            <p class="dica">Conheça as opções, adicione ao carrinho ou clique em "Tenho interesse" para preencher o contato.</p>
+            <div class="grade" id="lista-produtos">
+                <p>Carregando perfumes...</p>
             </div>
         </section>
 
@@ -122,6 +118,39 @@
             </div>
         </section>
     </main>
+
+
+    <div id="modal-carrinho" class="modal" hidden>
+        <div class="modal-caixa" role="dialog" aria-modal="true" aria-label="Carrinho">
+            <button class="fechar" type="button" aria-label="Fechar">×</button>
+            <h2>Seu carrinho</h2>
+            <div id="itens-carrinho">Seu carrinho está vazio.</div>
+            <div id="dados-pedido">
+                <div id="pedido-conta" hidden>
+                    <p>Comprando como <strong id="pedido-conta-email"></strong></p>
+                    <button id="btn-sair-carrinho" class="btn btn-claro" type="button">Sair</button>
+                </div>
+                <div id="pedido-campo-nome">
+                    <p>Seu nome</p>
+                    <input type="text" id="pedido-nome" placeholder="Digite seu nome">
+                </div>
+                <div id="pedido-campo-email">
+                    <p>Seu e-mail</p>
+                    <input type="text" id="pedido-email" placeholder="Digite seu e-mail">
+                </div>
+                <button id="btn-pedido" class="btn" type="button">Finalizar pedido</button>
+            </div>
+            <div id="resultado-pedido"></div>
+        </div>
+    </div>
+
+    <div id="modal-pedidos" class="modal" hidden>
+        <div class="modal-caixa" role="dialog" aria-modal="true" aria-label="Meus pedidos">
+            <button class="fechar" type="button" aria-label="Fechar">×</button>
+            <h2>Meus pedidos</h2>
+            <div id="lista-pedidos"></div>
+        </div>
+    </div>
 
     <footer class="rodape">
         <p>✿ Alma & Aroma · Perfumes para momentos que ficam.</p>
