@@ -276,3 +276,55 @@ nav a:hover {
 #resultado-contato:empty {
     display: none;
 }
+
+.estoque {
+    font-size: 0.85rem;
+    margin: 4px 0 8px;
+}
+
+#itens-carrinho,
+#lista-pedidos,
+#resultado-pedido {
+    margin: 10px 0;
+}
+
+button.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.acoes { display: flex; align-items: center; gap: 10px; }
+.conta { position: relative; }
+.btn-topo {
+    background: #fff; color: #493444; border: 1px solid #eadfdf; border-radius: 20px;
+    padding: 8px 14px; cursor: pointer; font-size: 0.95rem;
+}
+.btn-topo:hover { background: #fbe9ec; }
+.menu-flutuante {
+    position: absolute; right: 0; top: calc(100% + 8px); width: 260px; z-index: 30;
+    background: #fff; border: 1px solid #eadfdf; border-radius: 12px; padding: 16px;
+    box-shadow: 0 8px 24px rgba(73, 52, 68, 0.15);
+}
+.menu-flutuante[hidden], .modal[hidden], [hidden] { display: none !important; }
+.menu-flutuante input { width: 100%; margin: 8px 0; padding: 8px; border: 1px solid #eadfdf; border-radius: 8px; }
+.menu-flutuante .btn { display: block; width: 100%; margin-top: 8px; text-align: center; }
+#login-erro { color: #a33; font-size: 0.85rem; margin-top: 6px; }
+.btn-claro { background: #fff; color: #493444; border: 1px solid #eadfdf; }
+
+.modal {
+    position: fixed; inset: 0; z-index: 50; display: flex; align-items: center; justify-content: center;
+    background: rgba(73, 52, 68, 0.45); padding: 16px;
+}
+.modal-caixa {
+    position: relative; background: #fffdfa; border-radius: 14px; padding: 24px;
+    width: 100%; max-width: 480px; max-height: 90vh; overflow-y: auto;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+.modal-caixa h2 { margin-bottom: 12px; }
+.modal-caixa input {
+    width: 100%; margin: 4px 0 10px; padding: 10px; border: 1px solid #eadfdf; border-radius: 8px;
+}
+.fechar {
+    position: absolute; top: 10px; right: 14px; background: none; border: none;
+    font-size: 1.8rem; line-height: 1; cursor: pointer; color: #493444;
+}
