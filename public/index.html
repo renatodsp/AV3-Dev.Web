@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alma & Aroma - Perfumaria</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="topo">
+        <h1 id="logo">
+            <svg class="logo-icone" viewBox="0 0 48 64" aria-hidden="true">
+                <rect x="19" y="2" width="10" height="7" rx="2" fill="#ad7885"/>
+                <rect x="21" y="9" width="6" height="7" fill="#d9a6b2"/>
+                <path d="M10 22 Q10 16 16 16 H32 Q38 16 38 22 V54 Q38 60 32 60 H16 Q10 60 10 54 Z" fill="#fbe9ec" stroke="#493444" stroke-width="2.5"/>
+                <g transform="translate(24 38)">
+                    <circle r="4.2" cy="-6.5" fill="#e3a0b0"/>
+                    <circle r="4.2" cy="6.5" fill="#e3a0b0"/>
+                    <circle r="4.2" cx="-6.5" fill="#e3a0b0"/>
+                    <circle r="4.2" cx="6.5" fill="#e3a0b0"/>
+                    <circle r="3.6" fill="#ad7885"/>
+                </g>
+            </svg>
+            <span class="logo-texto">Alma <span>&</span> Aroma</span>
+        </h1>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#produtos">Produtos</a>
+            <a href="#contato">Contato</a>
+            <a href="#assistente">Assistente</a>
+        </nav>
+        <div class="acoes">
+            <button id="btn-carrinho" class="btn-topo" type="button">🛒 Carrinho (<span id="qtd-carrinho">0</span>)</button>
+            <div class="conta">
+                <button id="btn-conta" class="btn-topo" type="button">Entrar</button>
+                <div id="menu-conta" class="menu-flutuante" hidden>
+                    <div id="conta-deslogado">
+                        <p>Entre com seu e-mail para ver seus pedidos.</p>
+                        <input type="text" id="login-email" placeholder="Digite seu e-mail">
+                        <button id="btn-login" class="btn" type="button">Entrar</button>
+                        <div id="login-erro"></div>
+                    </div>
+                    <div id="conta-logado" hidden>
+                        <p>Olá, <strong id="conta-nome"></strong></p>
+                        <button id="btn-meus-pedidos" class="btn" type="button">Meus pedidos</button>
+                        <button id="btn-sair" class="btn btn-claro" type="button">Sair</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-texto">
+                <p class="sobretitulo">PERFUMARIA FEITA PARA SENTIR</p>
+                <h2>Sua essência merece <span>florescer.</span></h2>
+                <p>Conheça fragrâncias que acompanham seus momentos e expressam sua personalidade.</p>
+                <a href="#produtos" class="btn">Explorar fragrâncias</a>
+            </div>
+            <div class="imagem-hero"></div>
+        </section>
+
+        <section id="sobre" class="secao">
+            <p class="sobretitulo">CONHEÇA NOSSA HISTÓRIA</p>
+            <h2>Sobre a Alma & Aroma</h2>
+            <div class="grade">
+                <div class="info">
+                    <h3>Quem somos</h3>
+                    <p>A Alma & Aroma é uma perfumaria criada para valorizar os pequenos momentos por meio de fragrâncias marcantes.</p>
+                </div>
+                <div class="info">
+                    <h3>Nosso propósito</h3>
+                    <p>Queremos tornar a escolha de um perfume simples, agradável e especial para diferentes estilos e ocasiões.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="produtos" class="secao secao-produtos">
+            <p class="sobretitulo">DESCUBRA SUA FRAGRÂNCIA</p>
+            <h2>Nossos perfumes</h2>
+            <p class="dica">Conheça as opções, adicione ao carrinho ou clique em "Tenho interesse" para preencher o contato.</p>
+            <div class="grade" id="lista-produtos">
+                <p>Carregando perfumes...</p>
+            </div>
+        </section>
+
+        <section id="contato" class="secao">
+            <p class="sobretitulo">ESTAMOS AQUI PARA VOCÊ</p>
+            <h2>Fale com a gente</h2>
+            <p class="dica">Tire dúvidas ou demonstre interesse em uma fragrância.</p>
+            <div class="form">
+                <p>Seu nome</p>
+                <input type="text" id="nome" placeholder="Digite seu nome">
+                <p>Seu e-mail</p>
+                <input type="text" id="email" placeholder="Digite seu e-mail">
+                <p>Assunto</p>
+                <input type="text" id="assunto" placeholder="Sobre qual perfume deseja falar?">
+                <p>Mensagem</p>
+                <input type="text" id="mensagem" placeholder="Escreva sua mensagem">
+                <button id="btn-contato" class="btn">Registrar interesse</button>
+                <div id="resultado-contato"></div>
+            </div>
+        </section>
+
+        <section id="assistente" class="secao secao-assistente">
+            <p class="sobretitulo">ATENDIMENTO PERSONALIZADO</p>
+            <h2>Converse com a Lia ✿</h2>
+            <p class="dica">Sou a assistente virtual da Alma & Aroma. Posso ajudar você a conhecer as fragrâncias.</p>
+            <div class="form">
+                <div id="msg-usuario">Sua pergunta aparecerá aqui.</div>
+                <div id="chat-box">Olá! Sou a Lia, assistente da Alma & Aroma. Qual tipo de perfume você procura?</div>
+                <input type="text" id="input" placeholder="Pergunte à Lia sobre os perfumes...">
+                <button id="enviar" class="btn">Enviar para Lia</button>
+            </div>
+        </section>
+    </main>
+
+
+    <div id="modal-carrinho" class="modal" hidden>
+        <div class="modal-caixa" role="dialog" aria-modal="true" aria-label="Carrinho">
+            <button class="fechar" type="button" aria-label="Fechar">×</button>
+            <h2>Seu carrinho</h2>
+            <div id="itens-carrinho">Seu carrinho está vazio.</div>
+            <div id="dados-pedido">
+                <div id="pedido-conta" hidden>
+                    <p>Comprando como <strong id="pedido-conta-email"></strong></p>
+                    <button id="btn-sair-carrinho" class="btn btn-claro" type="button">Sair</button>
+                </div>
+                <div id="pedido-campo-nome">
+                    <p>Seu nome</p>
+                    <input type="text" id="pedido-nome" placeholder="Digite seu nome">
+                </div>
+                <div id="pedido-campo-email">
+                    <p>Seu e-mail</p>
+                    <input type="text" id="pedido-email" placeholder="Digite seu e-mail">
+                </div>
+                <button id="btn-pedido" class="btn" type="button">Finalizar pedido</button>
+            </div>
+            <div id="resultado-pedido"></div>
+        </div>
+    </div>
+
+    <div id="modal-pedidos" class="modal" hidden>
+        <div class="modal-caixa" role="dialog" aria-modal="true" aria-label="Meus pedidos">
+            <button class="fechar" type="button" aria-label="Fechar">×</button>
+            <h2>Meus pedidos</h2>
+            <div id="lista-pedidos"></div>
+        </div>
+    </div>
+
+    <footer class="rodape">
+        <p>✿ Alma & Aroma · Perfumes para momentos que ficam.</p>
+        <p>© 2026 Alma & Aroma · Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
